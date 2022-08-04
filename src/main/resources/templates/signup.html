@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+    <style>
+        .wrap {
+            background-color: #f85ea1;
+            min-height: 100vh;
+            padding-bottom: 50px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100px;
+
+
+            background-color: #f85ea1;
+
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            cursor: pointer;
+        }
+
+        .banner h2 {
+            margin: 40px auto;
+            /*font-family: 'Noto Sans KR', sans-serif;*/
+            height: 33px;
+            font-size: 42px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 0.79;
+            letter-spacing: -0.5px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .banner p {
+            margin: 40px auto;
+            width: 217px;
+            height: 48px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: -1.12px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .box {
+            width: 95%;
+            max-width: 500px;
+            margin: 20px auto 0px auto;
+            color: lightpink;
+
+        }
+
+        .field {
+            width: 95%;
+            max-width: 300px;
+            margin: 20px auto 0px auto;
+            position: center;
+
+
+        }
+
+        .field > label {
+            color: black;
+        }
+
+        .buttons {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 20px;
+        }
+
+        .box {
+            width: 538px;
+            border-radius: 5px;
+            background-color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .box .metadata {
+            position: relative;
+            display: flex;
+            font-family: 'Spoqa Han Sans';
+            font-size: 11px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: -0.77px;
+            text-align: left;
+            color: #adb5bd;
+            height: 14px;
+            padding: 10px 23px;
+        }
+
+        .box .metadata .date {
+
+        }
+
+        .box .metadata .username {
+            margin-left: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="wrap">
+    <div class="banner">
+        <h2>김시원 게시판</h2>
+        <p>
+            게시판 회원가입
+        </p>
+    </div>
+    <form class="box" action="/user/signup" method="post">
+        <div class="login-id-label">아이디</div>
+        <input type="text" name="username" placeholder="아이디" class="login-input-box">
+
+        <div class="login-id-label">비밀번호</div>
+        <input type="password" name="password" class="login-input-box">
+
+<!--        <div class="login-id-label">비밀번호 확인</div>-->
+<!--        <input type="text" name="passwordCheck" placeholder="비밀번호" class="login-input-box">-->
+
+        <div class="buttons">
+        <button id="login-id-submit">회원 가입</button>
+        </div>
+    </form>
+
+
+</div>
+
+
+</body>
+</html>
